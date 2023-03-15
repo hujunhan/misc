@@ -44,7 +44,7 @@ for jext in jpg_extensions:
                 # print(f'removing {os.path.join(root,file)}')
 
 ## Open the remaining raw and jpg files in default application
-command_list = ['open']
+command_list = ['open','-a','Adobe Lightroom']
 for root, dirs, files in os.walk(root_path):
         for file in files:
             ## Exclude hidden files and dat files
