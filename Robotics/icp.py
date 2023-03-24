@@ -35,7 +35,7 @@ def icp_matching(previous_points, current_points):
     if show_animation:
         fig = plt.figure()
         if previous_points.shape[0] == 3:
-           fig.add_subplot(111, projection='3d')
+            fig.add_subplot(111, projection="3d")
 
     while dError >= EPS:
         count += 1
@@ -95,9 +95,14 @@ def nearest_neighbor_association(previous_points, current_points):
     error = sum(d)
 
     # calc index with nearest neighbor assosiation
-    d = np.linalg.norm(np.repeat(current_points, previous_points.shape[1], axis=1)
-                       - np.tile(previous_points, (1, current_points.shape[1])), axis=0)
-    indexes = np.argmin(d.reshape(current_points.shape[1], previous_points.shape[1]), axis=1)
+    d = np.linalg.norm(
+        np.repeat(current_points, previous_points.shape[1], axis=1)
+        - np.tile(previous_points, (1, current_points.shape[1])),
+        axis=0,
+    )
+    indexes = np.argmin(
+        d.reshape(current_points.shape[1], previous_points.shape[1]), axis=1
+    )
 
     return indexes, error
 
@@ -121,15 +126,25 @@ def svd_motion_estimation(previous_points, current_points):
 def plot_points(previous_points, current_points, figure):
     # for stopping simulation with the esc key.
     plt.gcf().canvas.mpl_connect(
-        'key_release_event',
-        lambda event: [exit(0) if event.key == 'escape' else None])
+        "key_release_event", lambda event: [exit(0) if event.key == "escape" else None]
+    )
     if previous_points.shape[0] == 3:
         plt.clf()
-        axes = figure.add_subplot(111, projection='3d')
-        axes.scatter(previous_points[0, :], previous_points[1, :],
-                    previous_points[2, :], c="r", marker=".")
-        axes.scatter(current_points[0, :], current_points[1, :],
-                    current_points[2, :], c="b", marker=".")
+        axes = figure.add_subplot(111, projection="3d")
+        axes.scatter(
+            previous_points[0, :],
+            previous_points[1, :],
+            previous_points[2, :],
+            c="r",
+            marker=".",
+        )
+        axes.scatter(
+            current_points[0, :],
+            current_points[1, :],
+            current_points[2, :],
+            c="b",
+            marker=".",
+        )
         axes.scatter(0.0, 0.0, 0.0, c="r", marker="x")
         figure.canvas.draw()
     else:
@@ -150,8 +165,9 @@ def main():
 
     nsim = 10  # number of simulation
     import time
-    a=time.time()
-    
+
+    a = time.time()
+
     for _ in range(nsim):
 
         # previous points
@@ -160,17 +176,22 @@ def main():
         previous_points = np.vstack((px, py))
 
         # current points
-        cx = [math.cos(motion[2]) * x - math.sin(motion[2]) * y + motion[0]
-              for (x, y) in zip(px, py)]
-        cy = [math.sin(motion[2]) * x + math.cos(motion[2]) * y + motion[1]
-              for (x, y) in zip(px, py)]
+        cx = [
+            math.cos(motion[2]) * x - math.sin(motion[2]) * y + motion[0]
+            for (x, y) in zip(px, py)
+        ]
+        cy = [
+            math.sin(motion[2]) * x + math.cos(motion[2]) * y + motion[1]
+            for (x, y) in zip(px, py)
+        ]
         current_points = np.vstack((cx, cy))
 
         R, T = icp_matching(previous_points, current_points)
         # print("R:", R)
         # print("T:", T)
-    b=time.time()
-    print(f'time:{b-a}')
+    b = time.time()
+    print(f"time:{b-a}")
+
 
 def main_3d_points():
     print(__file__ + " start!!")
@@ -182,7 +203,7 @@ def main_3d_points():
 
     nsim = 10  # number of simulation
     import time
-    
+
     for _ in range(nsim):
         # previous points
         px = (np.random.rand(nPoint) - 0.5) * fieldLength
@@ -191,19 +212,22 @@ def main_3d_points():
         previous_points = np.vstack((px, py, pz))
 
         # current points
-        cx = [math.cos(motion[3]) * x - math.sin(motion[3]) * z + motion[0]
-              for (x, z) in zip(px, pz)]
+        cx = [
+            math.cos(motion[3]) * x - math.sin(motion[3]) * z + motion[0]
+            for (x, z) in zip(px, pz)
+        ]
         cy = [y + motion[1] for y in py]
-        cz = [math.sin(motion[3]) * x + math.cos(motion[3]) * z + motion[2]
-              for (x, z) in zip(px, pz)]
+        cz = [
+            math.sin(motion[3]) * x + math.cos(motion[3]) * z + motion[2]
+            for (x, z) in zip(px, pz)
+        ]
         current_points = np.vstack((cx, cy, cz))
 
         R, T = icp_matching(previous_points, current_points)
         # print("R:", R)
         # print("T:", T)
-    
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
     # main_3d_points()
