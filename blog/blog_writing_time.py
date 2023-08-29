@@ -25,6 +25,9 @@ for path in md_path:
             ## Format of date string: 2021-01-01
             # date=datetime.strptime(line.split(' ')[1],'%Y-%m-%d')
             break
+        # print the title
+        if "title:" in line:
+            print(line[6:])
 
 ## order the dict by key
 hour_count_dict = dict(sorted(hour_count_dict.items(), key=lambda item: item[0]))
