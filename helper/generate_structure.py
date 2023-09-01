@@ -16,36 +16,36 @@ if __name__ == "__main__":
 
     structure = {
         "Technology": {
-            "Computer_Science": {
+            "Computer Science": {
                 "Algorithms": {},
-                "Programming_Languages": {"Python": {}, "C++": {}},
-                "Web_Development": {},
-                "AI_MachineLearning": {"Papers": {}, "Projects": {}},
-                "Computational_Photography": {},
+                "Programming Languages": {"Python": {}, "C++": {}},
+                "Web Development": {},
+                "AI Machine Learning": {"Papers": {}, "Projects": {}},
+                "Computational Photography": {},
                 "Miscellaneous": {},
             },
             "Robotics": {
-                "Computer_Vision": {},
-                "Hardware_EmbeddedSystems": {},
-                "Planning_Localization": {},
-                "Projects_Seminars": {},
+                "Computer Vision": {},
+                "Hardware EmbeddedSystems": {},
+                "Planning Localization": {},
+                "Projects Seminars": {},
             },
         },
         "Sciences": {
             "Mathematics": {"Algebra": {}, "Statistics": {}, "Modeling": {}},
-            "Control_Theory": {"Digital_Signal_Processing": {}, "Process_Control": {}},
+            "Control Theory": {"Digital_Signal_Processing": {}, "Process_Control": {}},
             "Philosophy_Neuroscience": {
                 "Cognitive_Science": {},
                 "Philosophy_of_Mind": {},
                 "Psychology": {},
             },
         },
-        "Business_Entrepreneurship": {
+        "Business Entrepreneurship": {
             "Strategy": {},
-            "Investment_Finance": {},
-            "Industry_Analysis": {},
+            "Investment Finance": {},
+            "Industry Analysis": {},
         },
-        "Life_Skills": {
+        "Life Skills": {
             "Personal_Development": {
                 "Learning": {},
                 "Career_Planning": {},
@@ -54,7 +54,7 @@ if __name__ == "__main__":
             "Hobbies_Interests": {"Music": {}, "Photography": {}, "Travel": {}},
             "Health_Wellness": {"Nutrition": {}, "Mental_Health": {}},
         },
-        "Social_Sciences_Humanities": {
+        "Social Sciences Humanities": {
             "Economics": {},
             "Sociology": {},
             "Geography": {},

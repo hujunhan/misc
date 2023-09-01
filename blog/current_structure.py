@@ -24,7 +24,7 @@ def get_folder_structure(root_folder):
 
 if __name__ == "__main__":
     root_folder = (
-        "/Users/hu/Downloads/MarkdownNotes"  # Replace with the actual folder path
+        "/Users/hu/Downloads/new_markdown"  # Replace with the actual folder path
     )
     folder_structure = get_folder_structure(root_folder)
 

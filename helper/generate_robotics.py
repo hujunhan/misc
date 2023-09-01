@@ -12,7 +12,7 @@ def create_folder_structure(base_folder, structure):
 
 
 if __name__ == "__main__":
-    base_folder = "/Users/hu/Downloads/new_markdown/Technology/Robotics"  # Current working directory
+    base_folder = "/Users/hu/Downloads/new_markdown/Engineering/Robotics"  # Current working directory
 
     structure = {
         "Introduction": {},
