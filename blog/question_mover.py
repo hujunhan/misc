@@ -66,4 +66,4 @@ for file_path in src_files:
         with open(os.path.join(dst_folder, date_str, name), "w") as file:
             for line in new_file:
                 file.write(f"{line}")
-            print(f"{name} has been moved to destination folder")
+            print(f"{name} has been moved to destination folder {dst_folder}")

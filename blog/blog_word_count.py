@@ -15,6 +15,7 @@ english_count = 0
 
 all_count_dict = defaultdict(int)
 
+
 # 函数1，输入一个字符，如果是中文字符，就返回True，如果不是，就返回False
 def is_chinese(char):
     if "\u4e00" <= char <= "\u9fff":
@@ -81,6 +82,9 @@ x = list(all_count_dict.keys())
 x = [i.toordinal() for i in x]
 y = list(all_count_dict.values())
 
+#  count the total days
+day_count = max(x) - min(x)
+
 ## get the x ticks, divide the x axis into 5 parts
 max_x = max(x)
 min_x = min(x)
@@ -106,5 +110,5 @@ ax.text(
     transform=ax.transAxes,
 )
 
-plt.title("Word Count by Date")
+plt.title(f"Word Count by Date, Total Days: {day_count}")
 plt.show()
