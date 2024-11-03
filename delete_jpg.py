@@ -5,9 +5,9 @@ import sys
 
 ## Get the path to the folder containing the images
 root_path = sys.argv[1]
-# root_path = "/Volumes/Untitled/DCIM/10131014"
+# root_path = "/Volumes/CANON_DC/DCIM/425_1102"
 ## Define the extensions of the raw and jpg files
-raw_extensions = [".DND", ".RW2", ".NEF", ".ORF", ".ARW"]
+raw_extensions = [".DND", ".RW2", ".NEF", ".ORF", ".ARW", ".CR2", ".CR3"]
 jpg_extensions = [".JPG", ".JPEG", ".HIF"]
 
 ## Find the raw files and the jpg files
@@ -40,8 +40,14 @@ for jext in jpg_extensions:
     for root, dirs, files in os.walk(root_path):
         for file in files:
             if file.endswith(jext) and file[: -len(jext)] in jpg_remove_list:
-                os.remove(os.path.join(root, file))
-                print(f"removing {os.path.join(root,file)}")
+                try:
+                    os.remove(os.path.join(root, file))
+                    print(f"removing {os.path.join(root,file)}")
+                except Exception as e:
+                    print(e)
+                    print(f"Could not remove {os.path.join(root,file)}")
+                    # delete the jpg file
+
 
 ## Open the remaining raw and jpg files in default application
 command_list = ["open", "-a", "Adobe Lightroom"]
@@ -52,6 +58,7 @@ for root, dirs, files in os.walk(root_path):
             not file.startswith(".")
             and not file.endswith(".DAT")
             and not (file.endswith(jext) and file[: -len(jext)] in jpg_remove_list)
+            and file.endswith(tuple(raw_extensions))
         ):
             command_list.append(os.path.join(root, file))
 print(command_list)

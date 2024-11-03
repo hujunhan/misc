@@ -9,7 +9,7 @@ root_pat = Path("/Users/hu/Library/Mobile Documents/com~apple~CloudDocs/Markdown
 
 except_folder = "Questions"
 
-recent_days = 60
+recent_days = 30
 
 md_files = root_pat.glob("**/*.md")
 date_dict = defaultdict(datetime)

@@ -3,3 +3,10 @@
 .ipynb_checkpoints
 chromedriver
 *.pickle
+*.jpeg
+*.jpg
+*.ply
+*.png
+*.pyc
+*.pkl
+*.zip
