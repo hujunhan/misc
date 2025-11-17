@@ -1,0 +1,10 @@
+# Missing source files (no filename match)
+/Volumes/SSK/JPG/._DSC02484.jpeg
+/Volumes/SSK/JPG/DSC02484.jpeg
+
+# Ambiguous (multiple targets share filename; hash disabled)
+SOURCE /Volumes/SSK/JPG/DSC02933.jpg
+  TARGET /Volumes/SSK/Unsorted/2023/2023-12-22/DSC02933.jpg (size=3136200)
+  TARGET /Volumes/SSK/Unsorted/2021/2021-06-18/DSC02933.JPG (size=4030464)
+
+# Mismatched hash (no target with same content among duplicates)

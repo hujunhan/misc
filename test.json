@@ -1,0 +1,145 @@
+{
+    "basics": {
+        "name": "Junhan Hu",
+        "label": "",
+        "image": "",
+        "email": "hujunhan98@outlook.com",
+        "phone": "404-910-7078",
+        "url": "https://hujunhan.github.io",
+        "summary": "",
+        "location": {
+            "address": "",
+            "postalCode": "95035",
+            "city": "Milpitas",
+            "countryCode": "US",
+            "region": "CA"
+        },
+        "profiles": [
+            {
+                "network": "Github",
+                "username": "hujunhan",
+                "url": "https://github.com/hujunhan"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "OmniVision Technologies, Inc.",
+            "position": "Software Algorithm Engineer",
+            "startDate": "2022-07",
+            "endDate": "Present",
+            "summary": "Develop algorithms in the ISP pipeline to improve image quality; standardize objective IQ metrics and A/B evaluations across sensors and releases.",
+            "highlights": [
+                "Built a highlight-reconstruction module for saturated RAW regions (e.g., sky/LED), improving color accuracy (DeltaE00 ~10% vs baseline on over-exposed scenes) and restoring details.",
+                "Reduced denoise runtime by ~40% with a wavelet-based approach while maintaining SNR/texture on internal test sets.",
+                "Created an IQ toolkit (sharpness/MTF, SNR, visual noise) and standardized bring-up and A/B protocols.",
+                "Led image-quality validation and reporting for new ISP features and sensors from prototype to release."
+            ]
+        },
+        {
+            "name": "Darkblue Technology, Inc.",
+            "position": "Robotics Engineer Intern",
+            "startDate": "2021-07",
+            "endDate": "2022-07",
+            "summary": "Developed computer-vision and control components for an agricultural robot; built an integrated Gazebo simulation to accelerate iteration.",
+            "highlights": [
+                "Built the robot kinematic model using the D-H method and integrated it with control and perception.",
+                "Replaced RRT with BIT* for motion planning, producing shorter paths with fewer nodes in field-like simulations.",
+                "Implemented software camera sync (~0.1 s latency between two cameras) and deployed a detector reaching ~98% accuracy at ~10 FPS on an edge camera.",
+                "Integrated model, control, data transfer, and CV into a simulation of vision-servo behavior, reducing on-field iteration time by ~80%."
+            ]
+        },
+        {
+            "name": "Midea Group",
+            "position": "Computer Vision Intern",
+            "startDate": "2021-05",
+            "endDate": "2021-07",
+            "summary": "Implemented a geometry-based pose estimator running in real time; generated synthetic data and built fast visualization tools.",
+            "highlights": [
+                "Created a virtual camera system to simulate object-image projection mapping.",
+                "Projected RGB pixels from a target image onto the target’s 3D point cloud to stitch textures.",
+                "Generated simulated training data using OpenCV and Open3D to accelerate model development.",
+                "Built a portable Qt-based visualizer capable of ~100 FPS on commodity hardware."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Georgia Institute of Technology",
+            "area": "Electrical and Computer Engineering",
+            "studyType": "Master",
+            "startDate": "2020-08",
+            "endDate": "2022-05"
+        },
+        {
+            "institution": "Zhejiang University",
+            "area": "Control Science and Engineering",
+            "studyType": "Bachelor",
+            "startDate": "2016-09",
+            "endDate": "2020-06"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Robotics",
+            "keywords": [
+                "Kinematics",
+                "Modeling",
+                "Control Theory",
+                "Motion Planning",
+                "SLAM"
+            ]
+        },
+        {
+            "name": "Signal Processing",
+            "keywords": [
+                "Image Signal Processing",
+                "Image Quality",
+                "Computer Vision",
+                "Deep Learning",
+                "Machine Learning",
+                "Convex Optimization",
+                "HDR combine",
+                "Denoise",
+                "Tone mapping"
+            ]
+        },
+        {
+            "name": "Programming",
+            "keywords": [
+                "Linux",
+                "Python",
+                "C/C++",
+                "Real-time",
+                "Git",
+                "OpenCV",
+                "Open3D",
+                "ROS",
+                "Gazebo",
+                "Qt"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Fluent"
+        },
+        {
+            "language": "Chinese",
+            "fluency": "Native"
+        }
+    ],
+    "awards": [
+        {
+            "title": "Research and Innovation Scholarship",
+            "date": "2020-01",
+            "awarder": "Zhejiang University"
+        },
+        {
+            "title": "Merit Winner (top 8%) of Interdisciplinary Contest in Modeling (ICM)",
+            "date": "2019-01",
+            "awarder": "COMAP"
+        }
+    ]
+}
